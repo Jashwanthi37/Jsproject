@@ -32,6 +32,9 @@ body{
     border: 1px solid;
 
 }
+.meal-search input{
+    text-align: center;
+}
 .meal-search{
     margin-top: 5%;
     display: flex;
@@ -47,6 +50,7 @@ body{
     overflow: scroll;
     scrollbar-width: none;
 }
+
 #single-meal > div{
     border: 1px solid white;
     text-align: center;
@@ -56,6 +60,7 @@ body{
     display: flex;
     justify-content: center;
 }
+
 .instrc{
     font-size: 30px;
     color: gold;
@@ -99,9 +104,219 @@ body{
     gap: 8%;
     
 }
+.item:hover{
+    transform: translateY(-10px);
 
-#Aboutitems > div{
-    display: none;
 }
+
+ /* .Aboutitems > div{
+    display: none;
+} */
+.about-heading{
+    margin-top:15%;
+
+ }
+.aboutus{
+     margin-top: 10px;
+     display: flex;
+     gap: 5%;
+     justify-content: center;
+     align-items: center;
+}
+.aboutus img{
+    width: 400px;
+}
+.socialmedia{
+    margin-top: -30px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+.insta{
+    color: palevioletred;
+    font-size: 40px;
+}
+.insta:hover{
+    color: white;
+}
+.facebook:hover{
+    color: white;
+}
+.twitter:hover{
+    color: white;
+}
+.facebook,.twitter{
+    color: rgb(115, 115, 239);
+    font-size: 40px;
+}
+.footer{
+    margin: 2%;
+}
+.footer span{
+    color: red;
+}
+/* Media Queries for Responsiveness */
+
+/* Tablet and smaller devices */
+@media (max-width: 1024px) {
+
+    .about {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #meals-container > #allmeals {
+        flex-direction: column;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    #list-of-items {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5%;
+    }
+
+    .aboutus img {
+        width: 80%;
+    }
+
+    .cart-btn,
+    .buy-btn {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .socialmedia {
+        gap: 10px;
+    }
+
+    .socialmedia .insta,
+    .socialmedia .facebook,
+    .socialmedia .twitter {
+        font-size: 30px;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+
+    .about {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #meals-container > #allmeals {
+        flex-direction: column;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    #list-of-items {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5%;
+    }
+
+    .aboutus img {
+        width: 70%;
+    }
+
+    #search {
+        width: 80%;
+    }
+
+    #search-btn {
+        width: 50px;
+    }
+
+    .cart-btn,
+    .buy-btn {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .socialmedia .insta,
+    .socialmedia .facebook,
+    .socialmedia .twitter {
+        font-size: 30px;
+    }
+
+    .footer {
+        margin: 10px;
+        text-align: center;
+    }
+}
+
+/* Small Screens (Phone) */
+@media (max-width: 480px) {
+
+    .about {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .about .img2{
+        display: none;
+    }
+    .about .img1{
+        margin-left: 40px;
+    }
+    .about h1{
+        margin-left: 20px;
+    }
+
+    #meals-container > #allmeals {
+        flex-direction: column;
+        gap: 10px;
+        margin-left: 8%;
+    }
+
+    #list-of-items {
+        grid-template-columns: repeat(1, 1fr);
+        gap:10px;
+        margin-left: 10%;
+        
+    }
+    .aboutus{
+        flex-direction: column;
+    }
+
+    .aboutus img {
+        width: 80%;
+    }
+
+    #search {
+        margin-left: -20px;
+        width: 85%;
+    }
+
+    #search-btn {
+        width: 45px;
+    }
+    #single-meal > div{
+        width: 100%;
+    }
+
+    .cart-btn,
+    .buy-btn {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .socialmedia {
+        gap: 8px;
+    }
+
+    .socialmedia .insta,
+    .socialmedia .facebook,
+    .socialmedia .twitter {
+        font-size: 28px;
+    }
+
+    .footer {
+        margin: 10px;
+        font-size: 14px;
+    }
+}
+
+
 
 

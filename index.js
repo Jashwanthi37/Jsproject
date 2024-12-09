@@ -9,15 +9,15 @@ const Aboutitems=document.getElementById("Aboutitems")
 fetch("https://www.themealdb.com/api/json/v1/1/categories.php").then(response=>response.json()).then(res=>{
     res.categories.forEach(data=>{
         // console.log(data)
-        let div=document.createElement("div")
-        div.className="item"
-        div.id=data.idCategory
-        let img=document.createElement("img")
-        img.src=data.strCategoryThumb
-        let h3=document.createElement("h3")
-        h3.innerText=`${data.strCategory}`
-        div.append(h3,img)
-        listitems.appendChild(div)
+        let div=document.createElement("div");
+        div.className="item";
+        div.id=data.idCategory;
+        let img=document.createElement("img");
+        img.src=data.strCategoryThumb;
+        let h3=document.createElement("h3");
+        h3.innerText=`${data.strCategory}`;
+        div.append(h3,img);
+        listitems.appendChild(div);
     }
     )
 })
@@ -29,10 +29,10 @@ function findmeal(Element) {
     if (items.trim()) {
         fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${items}`).then(Response => Response.json()).then(data => {
             console.log(data)
-            resultdata.innerHTML = `Search result for ${items}`
+            resultdata.innerHTML = `Search result for ${items}`;
             console.log(data.meals);
             if (data.meals === null) {
-                resultdata.innerHTML = `Oops!! No results for ${items}`
+                resultdata.innerHTML = `Oops!! No results for ${items}`;
             }
             else {
                 allmeals.innerHTML = data.meals
@@ -115,12 +115,9 @@ function addMeal(meal){
     <h2>Instructions</h2>
     <p>${meal.strInstructions}</p>
     </div>
-    <video controls autoplay>
-    <source src="${meal.strYoutube}" type="video/mp4">
-    </video>
     <div class="btn">
     <button class="cart-btn">Add to Cart</button>
-    <button class="buy-btn">Buy Now<button>
+    <a href="./items.html"><button class="buy-btn">Buy Ingredients<button></a>
     </div>
     </div>
     `
