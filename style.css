@@ -71,6 +71,7 @@ body{
 }
 .singlemeal > .btn{
     display: flex;
+    justify-content: center;
 }
 .cart-btn{
     width: 310px;
@@ -257,22 +258,22 @@ body{
         display: none;
     }
     .about .img1{
-        margin-left: 40px;
+        margin-left: 15%;
     }
     .about h1{
-        margin-left: 20px;
+        margin-left: 30px;
     }
 
     #meals-container > #allmeals {
         flex-direction: column;
         gap: 10px;
-        margin-left: 8%;
+        margin-left: 10%;
     }
 
     #list-of-items {
         grid-template-columns: repeat(1, 1fr);
         gap:10px;
-        margin-left: 10%;
+        margin-left: 15%;
         
     }
     .aboutus{

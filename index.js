@@ -6,6 +6,12 @@ const singlemeal = document.getElementById("single-meal");
 const listitems=document.getElementById("list-of-items")
 const Aboutitems=document.getElementById("Aboutitems")
 
+function speak(){
+    var text=new SpeechSynthesisUtterance("search items for"+search.value)
+    speechSynthesis.speak(text);
+    
+}
+
 fetch("https://www.themealdb.com/api/json/v1/1/categories.php").then(response=>response.json()).then(res=>{
     res.categories.forEach(data=>{
         // console.log(data)
@@ -116,7 +122,6 @@ function addMeal(meal){
     <p>${meal.strInstructions}</p>
     </div>
     <div class="btn">
-    <button class="cart-btn">Add to Cart</button>
     <a href="./items.html"><button class="buy-btn">Buy Ingredients<button></a>
     </div>
     </div>
